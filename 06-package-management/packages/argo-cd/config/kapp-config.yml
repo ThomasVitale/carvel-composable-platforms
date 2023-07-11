@@ -1,0 +1,14 @@
+---
+apiVersion: kapp.k14s.io/v1alpha1
+kind: Config
+
+rebaseRules:
+
+- path: [data]
+  type: copy
+  sources: [new, existing]
+  resourceMatchers:
+  - kindNamespaceNameMatcher:
+      kind: Secret
+      namespace: argocd
+      name: argocd-secret

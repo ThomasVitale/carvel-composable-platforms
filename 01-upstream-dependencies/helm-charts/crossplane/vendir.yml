@@ -1,0 +1,12 @@
+apiVersion: vendir.k14s.io/v1alpha1
+kind: Config
+
+directories:
+- contents:
+  - helmChart:
+      name: crossplane
+      repository:
+        url: https://charts.crossplane.io/stable
+      version: 1.12.2
+    path: .
+  path: config/upstream

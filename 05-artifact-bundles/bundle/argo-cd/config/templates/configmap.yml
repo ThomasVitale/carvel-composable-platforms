@@ -1,0 +1,10 @@
+#@ load("@ytt:data", "data")
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: argo-demo-info
+  namespace: argocd
+data:
+  conference: #@ data.values.conference_name

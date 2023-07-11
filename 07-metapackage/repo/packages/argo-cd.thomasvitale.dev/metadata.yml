@@ -1,0 +1,9 @@
+apiVersion: data.packaging.carvel.dev/v1alpha1
+kind: PackageMetadata
+metadata:
+  creationTimestamp: null
+  name: argo-cd.thomasvitale.dev
+spec:
+  displayName: argo-cd
+  longDescription: argo-cd.thomasvitale.dev
+  shortDescription: argo-cd.thomasvitale.dev

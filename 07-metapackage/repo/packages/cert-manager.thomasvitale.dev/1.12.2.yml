@@ -1,0 +1,35 @@
+apiVersion: data.packaging.carvel.dev/v1alpha1
+kind: Package
+metadata:
+  creationTimestamp: null
+  name: cert-manager.thomasvitale.dev.1.12.2
+spec:
+  licenses:
+  - Apache 2.0
+  refName: cert-manager.thomasvitale.dev
+  releaseNotes: https://github.com/kadras-io/package-for-cert-manager/releases
+  releasedAt: "2023-07-11T13:26:15Z"
+  template:
+    spec:
+      deploy:
+      - kapp:
+          rawOptions:
+          - --wait-timeout=5m
+          - --kube-api-qps=50
+          - --kube-api-burst=100
+      fetch:
+      - imgpkgBundle:
+          image: ghcr.io/thomasvitale/cert-manager-package-demo@sha256:eba3c8c8c77694a56079d51f4f378651784a2b888589de23bc9eb926b5c243bb
+      template:
+      - ytt:
+          paths:
+          - config
+      - kbld:
+          paths:
+          - '-'
+          - .imgpkg/images.yml
+  valuesSchema:
+    openAPIv3:
+      default: null
+      nullable: true
+  version: 1.12.2

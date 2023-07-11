@@ -1,0 +1,8 @@
+#@data/values-schema
+---
+
+conference_name: "add name here"
+
+#@schema/desc "The service type for the ArgoCD Server."
+#@schema/validation one_of=["ClusterIP", "LoadBalancer", "NodePort"]
+service_type: ClusterIP

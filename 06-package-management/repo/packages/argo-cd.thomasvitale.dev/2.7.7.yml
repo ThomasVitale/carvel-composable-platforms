@@ -1,0 +1,36 @@
+apiVersion: data.packaging.carvel.dev/v1alpha1
+kind: Package
+metadata:
+  creationTimestamp: null
+  name: argo-cd.thomasvitale.dev.2.7.7
+spec:
+  refName: argo-cd.thomasvitale.dev
+  releasedAt: "2023-07-11T13:20:59Z"
+  template:
+    spec:
+      deploy:
+      - kapp: {}
+      fetch:
+      - imgpkgBundle:
+          image: ghcr.io/thomasvitale/argo-cd-package-demo@sha256:600b566703680dd5abb0b2a4ffccec4c1b288db713e1d58960964a13203e1661
+      template:
+      - ytt:
+          paths:
+          - config
+      - kbld:
+          paths:
+          - '-'
+          - .imgpkg/images.yml
+  valuesSchema:
+    openAPIv3:
+      additionalProperties: false
+      properties:
+        conference_name:
+          default: add name here
+          type: string
+        service_type:
+          default: ClusterIP
+          description: The service type for the ArgoCD Server.
+          type: string
+      type: object
+  version: 2.7.7

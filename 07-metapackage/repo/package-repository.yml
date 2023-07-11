@@ -1,0 +1,15 @@
+apiVersion: packaging.carvel.dev/v1alpha1
+kind: PackageRepository
+metadata:
+  annotations:
+    kctrl.carvel.dev/repository-version: 0.0.1
+  creationTimestamp: "2023-07-11T13:28:06Z"
+  name: packages.thomasvitale.dev
+spec:
+  fetch:
+    imgpkgBundle:
+      image: ghcr.io/thomasvitale/packages-repo-demo@sha256:4b00cdfb4bfaaa9199245f49a2dbcfbea69719cc7a161cf7e7b2e2da7a1f8284
+status:
+  conditions: null
+  friendlyDescription: ""
+  observedGeneration: 0

@@ -1,0 +1,9 @@
+apiVersion: kctrl.carvel.dev/v1alpha1
+kind: PackageRepositoryBuild
+metadata:
+  creationTimestamp: "2023-07-11T13:27:39Z"
+  name: packages.thomasvitale.dev
+spec:
+  export:
+    imgpkgBundle:
+      image: ghcr.io/thomasvitale/packages-repo-demo
