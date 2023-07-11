@@ -1,0 +1,28 @@
+apiVersion: data.packaging.carvel.dev/v1alpha1
+kind: Package
+metadata:
+  creationTimestamp: null
+  name: platform.thomasvitale.dev.0.0.1
+spec:
+  refName: platform.thomasvitale.dev
+  releasedAt: "2023-07-11T14:44:59Z"
+  template:
+    spec:
+      deploy:
+      - kapp: {}
+      fetch:
+      - imgpkgBundle:
+          image: ghcr.io/thomasvitale/platform-carvel-demo@sha256:33190365be20720ca9702874fc079d5a1c58547759c3b6e715411f79d91c2bab
+      template:
+      - ytt:
+          paths:
+          - config
+      - kbld:
+          paths:
+          - '-'
+          - .imgpkg/images.yml
+  valuesSchema:
+    openAPIv3:
+      default: null
+      nullable: true
+  version: 0.0.1

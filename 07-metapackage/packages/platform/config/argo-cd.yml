@@ -1,0 +1,11 @@
+apiVersion: packaging.carvel.dev/v1alpha1
+kind: PackageInstall
+metadata:
+  name: argo-cd
+  namespace: platform
+spec:
+  packageRef:
+    refName: argo-cd.thomasvitale.dev
+    versionSelection:
+      constraints: 2.7.7
+  serviceAccountName: kadras-install-sa

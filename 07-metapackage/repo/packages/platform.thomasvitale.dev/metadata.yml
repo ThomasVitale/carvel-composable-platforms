@@ -1,0 +1,9 @@
+apiVersion: data.packaging.carvel.dev/v1alpha1
+kind: PackageMetadata
+metadata:
+  creationTimestamp: null
+  name: platform.thomasvitale.dev
+spec:
+  displayName: platform
+  longDescription: platform.thomasvitale.dev
+  shortDescription: platform.thomasvitale.dev

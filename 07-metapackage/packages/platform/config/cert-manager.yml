@@ -1,0 +1,11 @@
+apiVersion: packaging.carvel.dev/v1alpha1
+kind: PackageInstall
+metadata:
+  name: cert-manager
+  namespace: platform
+spec:
+  packageRef:
+    refName: cert-manager.packages.kadras.io
+    versionSelection:
+      constraints: 1.12.2
+  serviceAccountName: kadras-install-sa
