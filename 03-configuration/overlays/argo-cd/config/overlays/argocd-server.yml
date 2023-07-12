@@ -1,7 +1,13 @@
 #@ load("@ytt:data", "data")
 #@ load("@ytt:overlay", "overlay")
 
-#@overlay/match by=overlay.subset({"kind": "Service", "metadata":{"name":"argocd-server"}})
+#@ def argo_service():
+kind: Service
+metadata:
+  name: argocd-server
+#@ end
+
+#@overlay/match by=overlay.subset(argo_service())
 ---
 spec:
   #@overlay/match missing_ok=True

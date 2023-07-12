@@ -1,0 +1,13 @@
+apiVersion: kbld.k14s.io/v1alpha1
+kind: Config
+minimumRequiredVersion: 0.37.4
+overrides:
+- image: ghcr.io/dexidp/dex:v2.37.0
+  newImage: ghcr.io/dexidp/dex@sha256:f579d00721b0d842328c43a562f50343c54b0048ef2d58d6b54e750c21fc7938
+  preresolved: true
+- image: quay.io/argoproj/argocd:v2.7.7
+  newImage: quay.io/argoproj/argocd@sha256:6a5d0e909b6ad106cef2b7ce73df509b09dc33da9c27e69775c8777084554c52
+  preresolved: true
+- image: redis:7.0.11-alpine
+  newImage: index.docker.io/library/redis@sha256:121bac949fb5f623b9fa0b4e4c9fb358ffd045966e754cfa3eb9963f3af2fe3b
+  preresolved: true
