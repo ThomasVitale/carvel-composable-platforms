@@ -1,6 +1,8 @@
 # Composable Platforms with Carvel
 
-Samples and demos of [Carvel](https://carvel.dev), which provides a set of reliable, single-purpose, composable tools that aid in your application building, configuration, and deployment to Kubernetes. 
+Samples and demos of [Carvel](https://carvel.dev), which provides a set of reliable, single-purpose, composable tools that aid in your application building, configuration, and deployment to Kubernetes.
+
+Check the [presentation slides](https://speakerdeck.com/thomasvitale/supercharge-your-kubernetes-platform-with-carvel-kcd-munich-2023) for more information on the Carvel tools and the commands used to work with this repository.
 
 ## 1. Upstream Dependencies
 
