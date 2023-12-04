@@ -3,12 +3,12 @@ kind: PackageRepository
 metadata:
   annotations:
     kctrl.carvel.dev/repository-version: 0.0.1
-  creationTimestamp: "2023-07-11T13:28:06Z"
+  creationTimestamp: "2023-12-04T20:03:00Z"
   name: packages.thomasvitale.dev
 spec:
   fetch:
     imgpkgBundle:
-      image: ghcr.io/thomasvitale/packages-repo-demo@sha256:4b00cdfb4bfaaa9199245f49a2dbcfbea69719cc7a161cf7e7b2e2da7a1f8284
+      image: ghcr.io/thomasvitale/packages-repo-demo@sha256:1f21e63f72572f7a9de2be3f4b9432a5643f2bab92a7817834a322775935e226
 status:
   conditions: null
   friendlyDescription: ""

@@ -7,5 +7,5 @@ spec:
   packageRef:
     refName: argo-cd.thomasvitale.dev
     versionSelection:
-      constraints: 2.7.7
+      constraints: 2.9.3
   serviceAccountName: kadras-install-sa
