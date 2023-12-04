@@ -1,4 +1,4 @@
-# Platform with Carvel
+# Platforms with Carvel
 
 This guide explains how to deploy a platform built with the Carvel tools on Kubernetes.
 
@@ -45,7 +45,7 @@ Add the Kadras repository to make the platform packages available to the cluster
 
 ```shell script
 kctrl package repository add -r kadras-packages \
-  --url ghcr.io/kadras-io/kadras-packages:0.12.0-RC3  \
+  --url ghcr.io/kadras-io/kadras-packages:0.14.2 \
   -n kadras-packages --create-namespace
 ```
 
@@ -55,7 +55,7 @@ The installation of the Kadras platform can be configured via YAML. Create a `va
 
 ```yaml
 platform:
-  profile: serving
+  profile: run
   infrastructure_provider: local
   ingress:
     domain: 127.0.0.1.sslip.io
@@ -68,7 +68,7 @@ Reference the `values.yml` file you created in the previous step and install the
 ```shell script
 kctrl package install -i engineering-platform \
   -p engineering-platform.packages.kadras.io \
-  -v 0.10.0-RC3 \
+  -v 0.12.2 \
   -n kadras-packages \
   --values-file values.yml
 ```
