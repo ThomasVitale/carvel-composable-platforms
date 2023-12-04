@@ -28,6 +28,6 @@ Samples and demo with Carvel [imgpkg](https://carvel.dev/imgpkg/).
 
 Samples and demo with Carvel [kapp-controller](https://carvel.dev/kapp-controller/).
 
-## 7. Metapackage
+## 7. Platform
 
 Samples and demo with Carvel [kapp-controller](https://carvel.dev/kapp-controller/).

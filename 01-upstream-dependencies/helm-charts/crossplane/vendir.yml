@@ -7,6 +7,6 @@ directories:
       name: crossplane
       repository:
         url: https://charts.crossplane.io/stable
-      version: 1.12.2
+      version: 1.14.3
     path: .
   path: config/upstream

@@ -1,4 +1,4 @@
-# Metapackage
+# Platform with Carvel
 
 This guide explains how to deploy a platform built with the Carvel tools on Kubernetes.
 
